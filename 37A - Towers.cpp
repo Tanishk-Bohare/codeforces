@@ -1,6 +1,7 @@
 #include<bits/stdc++>
 using namespace std;
-int n, vector<int>l(1001), h = 1, u, he = 1;
+int n,h = 1, u, he = 1;
+vector<int>l(1001)
 int main() {
     cin >> n;
     u = n;

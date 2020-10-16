@@ -1,11 +1,11 @@
-#include <iostream>
-#include <algorithm>
+#include<bits/stdc++>
 using namespace std;
-int n, l[1001], h = 1, u, he = 1;
+int n, vector<int>l(1001), h = 1, u, he = 1;
 int main() {
     cin >> n;
     u = n;
     for (int i = 0; i < n; i++) {
+        
         cin >> l[i];
     }
     sort(l, l + n);

@@ -23,42 +23,29 @@ const int mxN=2e5;
 const int N = 100031;
 
 
-void solve(){
-   int n; cin>>n;
-   str s; cin>>s;
-   int lol=0,lo=0;
-   vec(int)v; int udrcsr = 0;
-   for(int i=0;i<n;i++){
-       if(s[i]=='-'){
-           udrcsr++;
-           if(i==0 || s[i-1]!='-')v.pb(0);
-           v.back()++;
-       }
-       if(s[i]=='>')lol++;
-       if(s[i]=='<')lo++;
-   }
-   if(udrcsr+lo==n || udrcsr+lol==n){
-       cout<<n<<nl;
-   }else if(lo==n || lol==n){
-       cout<<n<<nl;
-   }else{
-       int u = s[0]=='-'&&s[n-1]==s[0]?1:0;
-       //cout<<u<<" check"<<nl;
-       int ans = 0;
-       for(auto x:v){
-           ans+=x+1;
-       }
-       cout<<ans-u<<nl;
-   }
- 
-}
- 
+
 int main()
 {
     IOS;
-    int t; cin>>t;
-    while (t--)
+    string tem1 = "",tem2 = "", tem3 ="";
+
+    for (string i = '1'; i < '10'; i++)
     {
-        solve();
+        // for (int j = 1; j < 10; j++)
+        // {
+        //     for (int k = 1; k <10; k++)
+        //     {
+        //         for (int l = 1; l < 10; l++)
+        //         {
+                    
+        //         }
+                
+        //     }
+            
+        // }
+        cout<<i<<nl;
+        
     }
+    
+    
 }

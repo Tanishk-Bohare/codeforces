@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 #define P pair<int,int>
 #define int64 int64_t
 #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
@@ -23,29 +23,30 @@ const int mxN=2e5;
 const int N = 100031;
 
 
+void solve(){
+    str s; cin>>s;
+    stack<char>ss;
+
+    for(auto x:s){
+        if(x=='A' || ss.empty())ss.push('A');
+        else if(x=='B'){
+            if(ss.empty())ss.push(x);
+            if(ss.top()=='A' || ss.top()=='B')ss.pop();
+        }
+        // cout<<ss.size()<<" mop"<<nl;
+    }
+    cout<<ss.size()<<nl;
+}
 
 int main()
 {
     IOS;
-    string tem1 = "",tem2 = "", tem3 ="";
-
-    for (string i = '1'; i < '10'; i++)
+    int t; cin>>t;
+    while (t--)
     {
-        // for (int j = 1; j < 10; j++)
-        // {
-        //     for (int k = 1; k <10; k++)
-        //     {
-        //         for (int l = 1; l < 10; l++)
-        //         {
-                    
-        //         }
-                
-        //     }
-            
-        // }
-        cout<<i<<nl;
-        
+        solve();
     }
-    
-    
 }
+
+
+

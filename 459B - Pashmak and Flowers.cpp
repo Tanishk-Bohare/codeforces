@@ -1,5 +1,6 @@
-#include <iostream>
-#include <algorithm>
+// #include <iostream>
+// #include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 __int64 a, arr[2000001], numOfMinElements = 1, numOfMaxElements = 1, dif, num = 1;
 int main() {

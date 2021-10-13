@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+void solve(){
+        int n, k;
+    cin>> n>> k;
+    vector<int>a(n, INT_MAX);
+    vector<int>v(k);
+    int t;
+    for(int i=0;i<k;++i)
+        cin>>v[i];
+    for(int i=0;i<k;++i){
+        cin>>t;
+        a[v[i]-1]=t;
+    }
+    v.clear();
+    int rm=INT_MAX-n;
+    vector<int>b(n);
+    for(int i=n-1;i>=0;--i){
+        rm = min(rm+1, a[i]);
+        b[i]=rm;
+    }
+    rm=INT_MAX-n;
+    for(int i=0;i<n;++i){
+        rm = min(rm+1, a[i]);
+        b[i]= min(b[i], rm);
+        cout<<b[i]<<" ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    int t = 1;
+    cin >> t;
+    while (t--){
+        solve();
+     }
+    return 0;
+}
